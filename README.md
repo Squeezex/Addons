@@ -1,1 +1,1 @@
-# Test version of Sharpness AddOn for WoW Classic SOD 
+# Test version of Sharpness AddOn for WoW Classic SOD
