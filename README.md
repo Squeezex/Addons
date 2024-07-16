@@ -1,2 +1,1 @@
-# Addons
-Addons for WoW
+# Test version of Sharpness WoW AddOn
