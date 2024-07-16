@@ -42,16 +42,6 @@ function Sharpness:InitializeOptions()
 	local cb_mushroom = self:CreateCheckbox("mushroom", "Show a mushroom on your screen", self.panel_main, self.UpdateIcon)
 	cb_mushroom:SetPoint("TOPLEFT", cb_hello, 0, -30)
 
-	local btn_reset = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
-	btn_reset:SetPoint("TOPLEFT", cb_combat, 0, -40)
-	btn_reset:SetText(RESET)
-	btn_reset:SetWidth(100)
-	btn_reset:SetScript("OnClick", function()
-		SharpnessDB = CopyTable(Sharpness.defaults)
-		self.db = SharpnessDB
-		EventRegistry:TriggerEvent("Sharpness.OnReset")
-	end)
-
 	InterfaceOptions_AddCategory(Sharpness.panel_main)
 
 	-- sub panel

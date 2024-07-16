@@ -16,22 +16,10 @@ function Sharpness:ADDON_LOADED(event, addOnName)
 			end
 		end
 		self.db.sessions = self.db.sessions + 1
-		print("You loaded this addon "..self.db.sessions.." times")
-
-		local version, build, _, tocversion = GetBuildInfo()
-		print(format("The current WoW build is %s (%d) and TOC is %d", version, build, tocversion))
-
-		self:RegisterEvent("PLAYER_ENTERING_WORLD")
-		hooksecurefunc("JumpOrAscendStart", self.JumpOrAscendStart)
+		print("You loaded Sharpness addon "..self.db.sessions.." times")
 
 		self:InitializeOptions()
 		self:UnregisterEvent(event)
-	end
-end
-
-function Sharpness:PLAYER_ENTERING_WORLD(event, isLogin, isReload)
-	if isLogin and self.db.hello then
-		DoEmote("HELLO")
 	end
 end
 
