@@ -31,5 +31,6 @@ SlashCmdList.SHARPNESS = function(msg, editBox)
 	
 	SetCVar("ResampleAlwaysSharpen", not GetCVarBool("ResampleAlwaysSharpen"));
 	print("Sharpness Switched")
-
+	PlayMusic(642322) -- It will play sound/music/pandaria/mus_50_toast_b_hero_01.mp3
+	
 end
