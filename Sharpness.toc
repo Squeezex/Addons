@@ -1,4 +1,4 @@
-## Interface: 100105
+## Interface: 11503
 ## Version: 1.0.0
 ## Title: Sharpness
 ## Notes: My first addon
