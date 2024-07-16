@@ -1,2 +1,2 @@
-# Addons
-Addons for WoW
+# AddOns
+AddOns for WoW
