@@ -1,2 +1,2 @@
 # Addons
-Addons for WoW
+Addons for WoW:Classic (SOD)
