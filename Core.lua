@@ -24,11 +24,12 @@ function Sharpness:ADDON_LOADED(event, addOnName)
 end
 
 -- InterfaceOptionsFrame_OpenToCategory(Sharpness.panel_main)
-SLASH_SHARPNESS1 = "/sharp"
-SLASH_SHARPNESS2 = "/son"
+SLASH_SHARPNESS1 = "/son"
+SLASH_SHARPNESS2 = "/soff"
 
 SlashCmdList.SHARPNESS = function(msg, editBox)
-
-	SetCVar("ResampleAlwaysSharpen", not GetCVarBool("ResampleAlwaysSharpen"));
 	
+	SetCVar("ResampleAlwaysSharpen", not GetCVarBool("ResampleAlwaysSharpen"));
+	print("Sharpness Switched")
+
 end

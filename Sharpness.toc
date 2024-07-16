@@ -6,4 +6,3 @@
 ## SavedVariables: SharpnessDB
 
 Core.lua
-Options.lua
