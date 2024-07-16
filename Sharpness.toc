@@ -1,0 +1,8 @@
+## Interface: 100105
+## Version: 1.0.0
+## Title: Sharpness
+## Notes: My first addon
+## SharpnessDB
+## Author: Mark Pokrovskii
+
+Core.lua
