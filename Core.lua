@@ -1,34 +1,32 @@
-Sharpness = CreateFrame("Frame")
-
-function Sharpness:OnEvent(event, ...)
-	self[event](self, event, ...)
-end
-Sharpness:SetScript("OnEvent", Sharpness.OnEvent)
-Sharpness:RegisterEvent("ADDON_LOADED")
-
-function Sharpness:ADDON_LOADED(event, addOnName)
-	if addOnName == "Sharpness" then
-		SharpnessDB = SharpnessDB or {}
-		self.db = SharpnessDB
-		for k, v in pairs(self.defaults) do
-			if self.db[k] == nil then
-				self.db[k] = v
-			end
-		end
-		self.db.sessions = self.db.sessions + 1
-		print("You loaded Sharpness addon "..self.db.sessions.." times")
-
-		self:InitializeOptions()
-		self:UnregisterEvent(event)
-	end
+-- Function to open Engineering profession
+local function OpenEngineering()
+    CastSpellByName("Engineering")
 end
 
--- InterfaceOptionsFrame_OpenToCategory(Sharpness.panel_main)
-SLASH_SHARPNESS1 = "/sharp"
-SLASH_SHARPNESS2 = "/son"
+-- Function to activate Nitro Boost from waist (slot 6)
+local function ApplyNitroBoost()
+    -- Use the item in the waist slot (slot 6)
+    UseInventoryItem(6)
+end
 
-SlashCmdList.SHARPNESS = function(msg, editBox)
+-- Function to activate Goblin Glider from cloak (slot 15)
+local function ApplyGlider()
+    -- Use the item in the back slot (slot 15)
+    UseInventoryItem(15)
+end
 
-	SetCVar("ResampleAlwaysSharpen", not GetCVarBool("ResampleAlwaysSharpen"));
-	
+-- Registering the slash command for Nitro Boost
+SLASH_NITROBOOST1 = "/boost"
+SlashCmdList["BOOST"] = function()
+    -- Open Engineering and apply Nitro Boost
+    OpenEngineering()
+    ApplyNitroBoost()
+end
+
+-- Registering the slash command for Glider
+SLASH_GLIDER1 = "/glider"
+SlashCmdList["GLIDER"] = function()
+    -- Open Engineering and apply Glider
+    OpenEngineering()
+    ApplyGlider()
 end

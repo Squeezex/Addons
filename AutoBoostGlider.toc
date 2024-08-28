@@ -1,0 +1,6 @@
+## Interface: 100105
+## Version: 1.0
+## Title: AutoBoostGlider Addon
+## Author: Mark Pokrovskii
+
+Core.lua
