@@ -1,5 +1,5 @@
 -- Addon name and namespace
-local Overall_Played, addonTable = ...
+local addonName, addonTable = ...
 
 -- Table to store playtime data
 PlayedTimeTrackerDB = PlayedTimeTrackerDB or {}
@@ -24,7 +24,8 @@ end
 -- Function to calculate total playtime across all characters
 local function GetOverallPlaytime()
     local total = 0
-    for _, playtime in pairs(PlayedTimeTrackerDB) do
+    for character, playtime in pairs(PlayedTimeTrackerDB) do
+        print("Debug: Character " .. character .. " has " .. playtime .. " seconds played.") -- Debug log
         total = total + playtime
     end
     return total
@@ -35,8 +36,12 @@ local function HandleSlashCommands(msg)
     if msg == "played" then
         UpdatePlaytime()
     elseif msg == "overallplayed" then
-        local overallTime = GetOverallPlaytime()
-        print("Total playtime across all characters: " .. FormatTime(overallTime))
+        if next(PlayedTimeTrackerDB) == nil then
+            print("No playtime data available. Log in with your characters to record their playtime.")
+        else
+            local overallTime = GetOverallPlaytime()
+            print("Total playtime across all characters: " .. FormatTime(overallTime))
+        end
     else
         print("Commands:\n/played - Show playtime for this character\n/overallplayed - Show total playtime across all characters")
     end
