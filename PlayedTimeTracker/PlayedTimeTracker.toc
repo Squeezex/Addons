@@ -5,4 +5,4 @@
 ## Author: Mark Pokrovskii
 ## SavedVariables: PlayedTimeTrackerDB
 
-Core.lua
+PlayedTimeTracker.lua
