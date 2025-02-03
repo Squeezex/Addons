@@ -1,0 +1,8 @@
+## Interface: 110005, 110007
+## Version: 1.0.0
+## Title: PlayedTimeTracker
+## Notes: -
+## Author: Mark Pokrovskii
+## SavedVariables: PlayedTimeTrackerDB
+
+PlayedTimeTracker.lua
