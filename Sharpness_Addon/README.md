@@ -1,2 +1,0 @@
-# AddOns
-AddOns for WoW

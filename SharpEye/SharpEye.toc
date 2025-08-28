@@ -1,0 +1,6 @@
+## Interface: 110200
+## Title: SharpEye
+## Notes: Toggle ResampleAlwaysSharpen via a simple minimap button
+## Author: Mark Pokrovskii
+## Version: 1.0
+SharpEye.lua
